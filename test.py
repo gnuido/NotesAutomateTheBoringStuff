@@ -1,3 +1,3 @@
-spam = ['Insfran', 'Morales', 'Cabral', 'Pintado', 'Colazzo', 'Saravia', 'Castro', 'De Blasis', 'Dominguez', 'Castillo', 'Abaldo']
-print(len(spam))
-print(spam[2])
+spam = {'animal' : 'cat', 'dog' : 5}
+sape = spam.values('cat')
+print(type(sape))

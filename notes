@@ -298,3 +298,40 @@ Chapter 4
 17)	There is a module named copy that contains two particular functions, copy() and deepcopy(). Both of these allow the user to make a copy
 	of an existing list and assign it to a new variable so it can be modified without compromising the original list. The deepcopy()
 	function does the same job for lists that contain other lists.
+
+#%--------------------------------------
+Chapter 5
+
+1)	An empty dictionary will be created when input:
+	dictionary = {}
+
+2)	Example of a dictionary:
+	dictionary = {'foo' : 42}	#where 'foo' is the key and 42 the value
+	
+3)	Dictionaries' main feature is that it allows users to index through keys instead of integers, which is particularly useful as keys can
+	consist in many different data types. Also, dictionaries have no defined order, unlike lists where sorting the values inside will result
+	in a different list.
+	
+4)	spam = {'bar' : 100}
+	spam['foo'] -> will result in a KeyError because 'foo' is not an existing key.
+	
+5)	Through spam.keys() dict_keys pseudo-list can be obtained and used in a way similar to lists, except it does not accept methods like 
+	append or get. Even so, return values can be used in a for loop to be presented as a readable text list. In consequence, dict_keys is a
+	particular data type itself, different than dictionary data type that dictionary stored 'cat' is, which is assosiated with its
+	correspondant value.
+	
+6)	The same principle as before works for spam.values(), where 'cat' is now a value from the dict_values data type.
+
+7)	A setdefault() method can be used to prevent a certain key to be absent in a dictionary if not specified, it may work as a shorcut for
+	an if statement as well. For instance:
+	spam = {'key1' : 'value1', 'key5' : 'value5', 'key8' : 'value8'}	#let's pretend that key5 is essential and cannot be skipped
+	spam.setdefault('key5', 'value5')		#if 'key5' is present in the dictionary, even with a different value, this doesn't do anything;
+											but if key5 was not in the dictionary both key and value are inserted into it
+											
+8)	The pprint module contains pprint() and pformat() functions that can be used for better and more friendly displayed of dictionaries items.
+	As other modules it has to be imported beforehand. These 
+
+#%--------------------------------------
+Chapter 6
+
+1)	
