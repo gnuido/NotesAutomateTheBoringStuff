@@ -1,0 +1,223 @@
+#Automate the boring stuff with Python
+
+#%--------------------------------------
+Chapter 1
+
+1)	*		->	operator
+	'hello'	->	value (string)
+	-88.8	->	value (floating-point)
+	-		->	operator
+	/		->	operator
+	+		->	operator
+	5		->	value (integer)
+	
+2)	spam	->	variable
+	'spam'	->	string	#notice the single quotes
+	
+3)	Some data types:
+	-integer: whole numbers, e.g.: 15.
+	-floating-point: numbers with decimals, e.g.: 15.0.
+	-string: alphanumerical or symbolic characters to be read as a string of text, e.g.: 'the number is 15!'. Notice the use of single
+	quotes.
+	
+4)	Expressions are composed by values and operators, although technically a single value is also an expression with no operators involved.
+	All expressions evaluate down to a single value, as long as the expressions is valid.
+5)	An assigment statement can store any type of value into a variable if prompted accordingly:
+	variable = value	#print(variable) will then print 'value'
+	The variable must have a valid name, starting with a letter or underscore followed by alphanumerical characters or underscores.
+	Unlike the expressions, which can only evaluate down to a particular value, statements like these can arbitrarily assign any given
+	value to a variable. In consequence, the assigned value can be overwritten by a new one if a new statement is made:
+	variable = newValue	#print(variable) will now print newValue as value has been overwritten
+	
+6)	bacon = 20	#assignment statement
+	bacon + 1	#expression
+	The variable bacon is still assosiated to the value "20" as no other statement was made.
+	
+7) 	'spam' + 'spamspam'	#the two strings are concatenated >> 'spamspamspam'
+	'spam' * 3			#the string gets multiplied thrice >> 'spamspamspam'
+	
+8)	Variable names can only contain letters, numbers and underscores; but can only begin with letters or underscores, therefore egg is a
+	valid name while 100 is not.
+	
+9)	Three different types of values can be obtain by using functions:
+	-string: str(value)
+	-integer: int(value)
+	-floating-point: float(value)
+	
+10)	'I have eaten ' + 99 + ' burritos.' will cause an error since the expression is mixing two different data types: two strings and an
+	integer. This can be fixed by either using single quotes or the str() function, as in:
+	-> 'I have eaten ' + '99' + ' burritos.'
+	-> 'I have eaten ' + str(99) + ' burritos.'
+	
+11)	The len(object) function will return the number of items (the lenght) of an object (lists, tuples, dictionaries, etc.).
+	The round(value, decimals) built-in function takes a floating-point number and round it to the closest number with a determined
+	number of decimals. If no argument is given for the amount of decimals the number is rounded to the closest integer.
+	
+#%--------------------------------------
+Chapter 2
+
+1)	The two Boolean values are "True" and "False", with the first letter in uppercase. Notice that the first letter in "Boolean" is also
+	capitalized as it is named after George Boolean.
+
+2)	Expressions that use Boolean or comparison operators evaluate down to one of the previously mentioned Boolean values. The Boolean
+	operators compare two Boolean values:
+	-or: at least two comparisons are made, expression is True if at least one comparison is True.
+	-and: expression is True if all comparisons are True.
+	-not: a comparison is made, operator evaluates down to the opossite Boolean value.
+	
+3)	%-----------------------------------------------------------%
+	|	comparison 1	|	comparison 2	|		and			|
+	-------------------------------------------------------------
+	|		True		|		True		|		True		|
+	|		True		|		False		|		False		|
+	|		False		|		True		|		False		|
+	|		False		|		False		|		False		|
+	%-----------------------------------------------------------%
+	%-----------------------------------------------------------%
+	|	comparison 1	|	comparison 2	|		or			|
+	-------------------------------------------------------------
+	|		True		|		True		|		True		|
+	|		True		|		False		|		True		|
+	|		False		|		True		|		True		|
+	|		False		|		False		|		False		|
+	%-----------------------------------------------------------%
+	%---------------------------------------%
+	|	comparison 1	|		not			|
+	-----------------------------------------
+	|		True		|		False		|
+	|		False		|		True		|
+	%---------------------------------------%
+	
+4)	(5 > 4) and (3 == 5)				->	True and False		->	False
+	not(5 > 4)							->	not(True)			->	False	
+	(5 > 4) or (3 == 5)					->	True or False		->	True
+	not((5 > 4) or (3 == 5))			->	not(True or False)	->	not(True)	->	False
+	(True and True) and (True == False)	->	True and False		->	False
+	not(False) or not(True)				->	True or False		->	True
+	
+5)	Comparison operators:
+	-greater than (>)
+	-less than (<)
+	-greater than or equal to (>=)
+	-less than or equal to (<=)
+	-equal to (==)
+	-not equal to (!=)
+
+6)	The equal to operator compares two values and returns a True Boolean value if both are identical, or a False value if not. No value
+	is stored in the process.
+	
+7)	A condition is an expression that evaluates down to a Boolean value and is an essential part in flow control mechanisms. Conditions are
+	often used to trigger a specific block of code, when requirements have been met.
+
+8)	spam = 0				|									#a block of code starts when identation increases, ending when identation
+	if spam == 10:			|									 decreases back to zero or a containing block's identation
+		print('eggs')		|block1
+		if spam > 5:		|block1								3blocks 2 and 3 are contained by block 1
+			print('bacon')	|block1		block2
+		else:				|block1
+			print('ham')	|block1					block3
+		print('spam')		|block1
+	print('spam')			|
+
+9)	spam = int(input('Please, pick a number: '))	#the input function stores a string into the variable, thus a int() convertion function
+	if spam == 1:									is necessary
+		print('Hello')
+	elif spam == 2:
+		print('Howdy')
+	else:
+		print('Greetings!')
+	
+10)	Ctrl-C will provoque a KeyboardInterrupt error that stops the execution of code, being particularly useful when trapped in an infinite
+	code loop.
+
+11)	There are two important statements that can be use inside a loop:
+	-break: to escape the loop immediatly.
+	-continue: to reevaluate the condition, that is, to return to the start of the loop. 
+
+12)	The range function can accept up to three arguments, for example:
+	-range(10): creates a range of 10 elements, from 0 (default starting point) to 9 increasing the number by one (default) at a time.
+	-range(0,10): same as above but the starting point is now explicit and can be changed to a greater number.
+	-range(0,10,1): creates the same range but now the increase step can be changed to another value.
+	Take notice that these three particular functions are, in practice, the same only difference being later cases provide further
+	configuration options. There's a particular case in which the starting point can be greater than the end point, albeit a negative
+	increase step has to be set to make it a decreasing range.
+	
+13)	A simple for loop code:
+	
+	for i in range(1,11):	#i is used as an index
+		print(i)
+	
+	A slightly more complex while loop:
+	
+	i = 1
+	while i <= 10:
+		print(i)
+		i += 1		#increases the index by one
+
+13)	Unlike the pre-built functions, functions in imported modules have to be called with a refference to said module, in the example:
+	import spam
+	spam.bacon()	#where bacon() is the function and spam the module
+	
+#%--------------------------------------
+Chapter 3
+
+1)	Functions allow the user to reuse parts of the code without bloating up the whole script, while also providing a more organized 
+	management of variables by disciminating between local and global ones.
+	
+2)	The code inside a function only executes when the function itself is called, not when defined.
+
+3)	A function is created when the function name is stated after def, as in:
+	
+	def example():
+		
+4)	When a function is created, appart from the def statement, it needs a body to establish what the function actually does. Again, defining
+	this does not execute the code but a function call does. For example:
+	
+	def example():		#def statement
+		print('This is an example.')		#function body
+	
+	example()		#function call
+	
+5)	A Python programme has a single global scope where every global variable is stored. In contrast, there is a local scope for each
+	function created, local variables will only be available for their own local scopes.
+	
+6)	Every variable stored in a local scope is lost when a function call returns, unless the variable is explicitly sent to the global scope.
+
+7)	A return value is what a function evaluates to after a function call. It can be prompted in the function body and may consist in an
+	expression.
+
+8)	Without a prompted return value, the function implicitly returns a None value, which is a particular data type that translates to a null
+	value.
+	
+9)	Inside a function a "global" statement can force the variable to change to the global scope, i.e.:
+	
+	def example():
+		variableExample = 2 * 8
+		global variableExample		#now the variable is in the global scope
+		
+10)	The previously defined None variable falls into the NoneType data type.
+
+11)	"import areallyourpetsnamederic" will import the areallyourpetsnamederic module (not included with Python by default) alongside all the
+	functions that are built-in that same module. After that, it'll be possible to access these functions and use them in the code.
+	
+12)	import spam
+	spam.bacon()
+	
+13)	Expected error cases can be managed with try/except statements by providing alternatives to handle these errors. For example:
+
+	while True:
+		try:
+			height = int(input('How tall are you (in cm)?'))
+			if height < 0:
+				print('How is that even possible? You dummy')
+			elif height > 230:
+				print('Are you sure you are not a Godzilla?')
+			else:
+				print('That seems fine')
+				break
+		except ValueError:
+			print('Please enter you height using numbers only')		#an error produced by the input of something different than an integer
+			continue												will trigger a ValueError, but instead of crashing the code loops back
+
+14)	As it can be seen in the previous case, the try clause configures the desired code while the except clause will just provide a bypass to
+	the error so as to avoid the code crashing.
