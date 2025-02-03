@@ -221,3 +221,80 @@ Chapter 3
 
 14)	As it can be seen in the previous case, the try clause configures the desired code while the except clause will just provide a bypass to
 	the error so as to avoid the code crashing.
+	
+#%--------------------------------------
+Chapter 4
+1)	Brackets [] are used to define a list of values, as in:
+	exampleList = [value1, value2, value3]
+	
+2)	spam = [2, 4, 6, 8, 10]		#list named spam
+	spam.insert(2, 'hello')		#one option is to insert the string in the third position, between the 4 and 6
+	spam[2] = 'hello'			#alternatively, the string can sustitute the third number in the list
+	
+3)	spam = ['a', 'b', 'c', 'd']
+	spam[int('3' * 2) / 11]	->	returns an error message because it tries to evaluate down to the listed value in the position given by
+								the number between brackets, in this case a floating-point number which is impossible.
+								
+4)	spam = ['a', 'b', 'c', 'd']
+	spam[-1] -> 'd' 	#will return the last value in the list
+
+5)	spam = ['a', 'b', 'c', 'd']
+	spam[:2] -> 'a', 'b'	#works with intervals, where the colon separates the starting point from the ending point; if not specified it
+	will default to the first and last values respectively
+	
+6)	bacon = [3.14, 'cat', 11, 'cat', True]
+	bacon.index('cat') -> 1		#evaluates down to the position of the first 'cat' string
+	
+7)	bacon = [3.14, 'cat', 11, 'cat', True]
+	bacon.append(99) -> [3.14, 'cat', 11, 'cat', True, 99]	#99 gets added to the list, at the end of it
+	
+8)	bacon = [3.14, 'cat', 11, 'cat', True]
+	bacon.remove('cat')	-> [3.14, 11, 'cat', True]	#deletes the first 'cat' value from the list
+	
+9)	List can get concatenated or replicated with the += or *= operators, accordingly. For example:
+	spam = [1, 2, 3]
+	spam += [4,5]
+	print(spam) -> [1, 2, 3, 4, 5]	#list concatenation
+	
+	spam = [a, b]
+	spam *= 3
+	print(spam) -> [a, b, a, b, a, b] #list replication
+
+10)	append() method will add a new value to the end of the list, while insert() allows the user to choose the index position of the value in
+	the list.
+
+11)	Values inside list can be removed in several ways, among them:
+	-remove() method: the value to be deleted has to be known and written inside the parenthesis.
+	-del() method: in which case the index number goes between parenthesis.
+	
+12)	Strings can be thought as a concatenation of single text values (or characters) arranged in a specific way, just like lists. Therefore,
+	the same logic applied when working with lists can be implemented when working with strings. For instance, strings can be concatenated
+	as seen in exercise 9:
+	spam = 'Eggs, sausages'
+	spam += ' and spam'
+	print(spam) -> 'Eggs, sausages and spam'
+
+13)	Lists and tuples differ in the mutability of the values they contain. Tuples are immutable, the values they contain cannot be tampered
+	with, only way to change the values it contains is to overwrite the tuple with a new one. These are useful when it is desired to warn
+	other people with access to the code from modifying existing values.
+	
+14)	exampleTuple = (42,)	#the comma distinguish the single value tuple from a string (if the value was a string on its own)
+
+15)	There are functions to convert from a list value to a tuple value and viceversa:
+	list((1, 2, 3)) -> [1, 2, 3]	#list() function turns the input into a list
+	tuple(['a', 'b', 'c']) -> ('a', 'b', 'c')	#tuple() converts the input into a tuple
+	#notice that both can also be used with strings, where the list or tuple values are each character of said string
+	
+16)	Technically speaking, variables will not store list values but references to the list itself. That way, if the list is modified the
+	variable will always be kept updated, for instance:
+	spam = ['eggs', 'sausages', 'bacon']
+	spammer = spam
+	spam[1] = 'bread'
+	print(spam)
+	print(spammer)		#it might be expected that spammer would contain the original spam values, with 'sausages' instead of 'bread'; but
+						spammers refers to the variable spam, so both are updated
+						#creating a new list named spam does work as previously expected
+						
+17)	There is a module named copy that contains two particular functions, copy() and deepcopy(). Both of these allow the user to make a copy
+	of an existing list and assign it to a new variable so it can be modified without compromising the original list. The deepcopy()
+	function does the same job for lists that contain other lists.

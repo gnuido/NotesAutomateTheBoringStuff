@@ -1,3 +1,5 @@
-new = -5
-print(type(new))
-
+spam = ['eggs', 'sausages', 'bacon']
+spammer = spam
+spam[1] = 'bread'
+print(spam)
+print(spammer)
