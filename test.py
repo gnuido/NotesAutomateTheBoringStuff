@@ -1,5 +1,3 @@
-spam = ['eggs', 'sausages', 'bacon']
-spammer = spam
-spam[1] = 'bread'
-print(spam)
-print(spammer)
+spam = ['Insfran', 'Morales', 'Cabral', 'Pintado', 'Colazzo', 'Saravia', 'Castro', 'De Blasis', 'Dominguez', 'Castillo', 'Abaldo']
+print(len(spam))
+print(spam[2])
