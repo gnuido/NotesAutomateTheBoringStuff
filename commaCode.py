@@ -9,7 +9,7 @@ def commaDesigner(importedList):
 			bufferList += importedList[i] + ', '	
 		bufferList += importedList[-2] + ' '			#before the last value the comma is skipped
 		bufferList += 'and ' + importedList[-1]		#uses and at the end instead of a comma
-	return(bufferList.title())
+	return(bufferList)
 	
 userDefinedList = []
 while True:
@@ -28,7 +28,7 @@ while True:
 			print('Input must be a valid data type')
 			continue
 #userDefinedList = ['Insfran', 'Morales', 'Cabral', 'Pintado', 'Colazo', 'Saravia', 'Castro', 'De Blasis', 'Dominguez', 'Castillo', 'Abaldo']
-#mid 2024 season formation of Gimnasia y Esgrima de La Plata as an example
+#2024 midseason formation of Gimnasia y Esgrima de La Plata as an example
 
 processedList = commaDesigner(userDefinedList)
 print(processedList)
