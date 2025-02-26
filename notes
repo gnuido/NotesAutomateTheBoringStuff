@@ -334,4 +334,13 @@ Chapter 5
 #%--------------------------------------
 Chapter 6
 
-1)	
+1)	Given that strings are usually defined between single or double quotes, escape characters can be used to avoid problems while writing
+	characters that otherwise would break the syntax. These type of characters consist in a backslash followed by the troublesome character.
+	For example, if a string has to include single and double quotes, the string can be written as:
+	
+	stringExample = 'There\'s a huge misconception about the benefits of drinking large amounts of that "water".'
+	
+	In this case, the apostrophe can cause the string to be finished before the s, producing an error down the line as the rest of the
+	sentence is not part of the string and is not valid Python code.
+	
+2)	
