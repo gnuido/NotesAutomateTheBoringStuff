@@ -328,7 +328,8 @@ Chapter 5
 	spam.setdefault('key5', 'value5')		#if 'key5' is present in the dictionary, even with a different value, this doesn't do anything;
 											but if key5 was not in the dictionary both key and value are inserted into it
 											
-8)	The pprint module contains pprint() and pformat() functions that can be used for better and more friendly displayed of dictionaries items.
+8)	The pprint module contains pprint() and pformat() functions that can be used for better and more friendly displayed of dictionaries 
+	items.
 	As other modules it has to be imported beforehand.
 
 #%--------------------------------------
@@ -343,4 +344,54 @@ Chapter 6
 	In this case, the apostrophe can cause the string to be finished before the s, producing an error down the line as the rest of the
 	sentence is not part of the string and is not valid Python code.
 	
-2)	
+2)	\n and \t are escape characters, the first one will input a new line in a string, while the second one will insert a tab in it.
+
+3)	Given that escape characters are defined by a backslash, a backslash itself has to be inserted in a string as \\.
+
+4)	"Howl's Moving Castle" is a valid string because it's delimited by double quotes, hence the apostrophe does not implicate a syntax
+	error.
+	
+5)	There are at least three ways to insert newlines in strings:
+	-One way is to simply write down several print() statements, which implicitly ends with a \n.
+	-Another way is to use \n as an escape character to insert a newline.
+	-Finally, a multiline string can be created by using three double quotes to delimit it, for example:
+	
+	 stringExample = """
+		Then be not coy, but use your time,
+		and while ye may go marry.
+		For having lost but once your prime,
+		you may forever tarry.
+		Fragment of 'To the Virgins, to make much of time' by Robert Herrick."""
+	
+	#Printing this last string will insert newlines to fit the pattern in the defined string.
+	
+6)	String					evaluates to
+	'Hello world!'[1]	-> 	e
+	'Hello world!'[0:5]	->	Hello 
+	'Hello world!'[:5]	->	Hello 	#until the index 4
+	'Hello world!'[3:]	->	lo world!
+
+7)	String							evaluates to
+	'Hello'.upper()				->	HELLO
+	'Hello'.upper().isupper()	->	True		#Boolean
+	'Hello'.upper().lower()		->	hello
+	
+8)	String														evaluates to
+	'Remember, remember, the fifth of November.'.split()	->	['Remember', 'remember', 'the', 'fifth', 'of', 'November']
+	split() will create a list where each element is determined by whitespaces (either spaces, tabs or newlines). An alternative separator
+	can be passed as an argument, although it won't be included in the output such as whitespaces in the default case.
+	
+	'There can be only one.'.split()						->	['There', 'can', 'be', 'only', 'one.']
+	'-'.join(['There', 'can', 'be', 'only', 'one'])			->	There-can-be-only-one.
+	join() will use a given string to "glue together" any list of strings is called onto.
+	
+9)	A string can be justified or centered by using:		#each of these should be printed if tested
+	-'example string'.ljust(20, '+'):	which will add (in this example) twenty plus symbols after the example string.
+	-'example string'.rjust(10):		which will insert (in this case) ten blank spaces before the example string, notice that there's no
+										second argument given.
+	-'example string'.center(5, '+'): 	leaving the phrase example string between ten, five on each side, plus symbols. 
+	
+10)	Similarly, whitespaces can be trimmed from strings by using:
+	-.strip(): to trimmed whitespaces from both sides of the string.
+	-.lstrip(): to suppress only whitespaces on the left side of the string.
+	-.rstrip(): to omit whitespaces at the end of the string.
