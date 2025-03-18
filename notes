@@ -395,3 +395,23 @@ Chapter 6
 	-.strip(): to trimmed whitespaces from both sides of the string.
 	-.lstrip(): to suppress only whitespaces on the left side of the string.
 	-.rstrip(): to omit whitespaces at the end of the string.
+
+#%--------------------------------------
+Chapter 7
+
+1)	Regex objects are created by the re.compile() function, which creates and returns a Regex object, later used in the matching comparison process.
+
+2)	Raw string are called by using .compile(r'') and have the advantage of not having to use escape characters for backslashes(\) or any other special characters that might cause ambiguity.
+
+3)	.search() will accept a block of text as argument and will look for coincidences with the pattern previously created, that is, the regular expression or Regex object; if positive, the .search() method will fetch the result.
+
+4)	Once found the matching string, it can be retrieve with the .group() method, which works similarly to the .fetchall() method in SQL, assigning it to a given variable and allowing it to be printed or referred to.
+
+5)	For groupings in regular expresions:
+	-group(0): returns the whole string that matches the Regex object.
+	-group(1): returns the first part of the string, that is, the part that matches the pattern inside the first parenthesis.
+	-group(2): returns the second part of the string, the one that matches the pattern in the second parentheses.
+
+6)	To use special characters like parentheses or periods inside regular expression a backslash is used beforehand, for example: \(, \), \.
+
+7)		
