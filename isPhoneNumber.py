@@ -18,7 +18,7 @@ def isPhoneNumber(text):        #assuming a phone has the format 000-000-0000
         return False
     for i in range(8,12):
         if not text[i].isdecimal():
-            return False            #prone to error, interprets any string that begins with the valid format as a phone number
+            return False            #prone to error, interprets any string that begins with the valid format as a phone number, for example: 222-464-55558835 will be interpret as a the phone number 222-464-5555 despite not even being a phone number.
     return True
 #-----
 
