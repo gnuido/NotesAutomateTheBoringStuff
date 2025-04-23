@@ -1,1 +1,3 @@
-print('Hello'.center(20, '-'))
+lista = []
+lista.insert(range(10))
+print(lista)
